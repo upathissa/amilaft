@@ -43,6 +43,7 @@
          * allow user to upload the logo of the site.
          * This is shown in theme customize 
          * 
+         * @see Adding custom logo
          * @link https://developer.wordpress.org/themes/functionality/custom-logo/
          */
         add_theme_support( 'custom-logo', [
@@ -51,6 +52,18 @@
             'width' => 400,
             'flex-height' => true,
             'flex-width'  => true,
+        ] );
+
+        /**
+         * Adds custom background to customizer panel
+         * 
+         * @see Enable Custom Backgrounds
+         * @link https://developer.wordpress.org/themes/functionality/custom-backgrounds/#enable-custom-backgrounds
+         */
+        add_theme_support( 'custom-background', [
+            'default-color' => 'ffffff',
+            'default-image' => '',
+            'default-repeat' => 'no-repeat',
         ] );
     }
  }
