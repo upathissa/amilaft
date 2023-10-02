@@ -24,10 +24,13 @@
 
     public function register_styles() {
         $main_css_path = AMILAFT_DIR_URI. '/assets/css/main.css';
+        $unicons = 'https://unicons.iconscout.com/release/v4.0.8/css/line.css';
         wp_register_style( 'main-css', $main_css_path, [], filemtime(AMILAFT_DIR_PATH . '/assets/css/main.css'), 'all' );
+        wp_register_style( 'unicons', $unicons, [], 4, 'all' );
 
         // Enqueue styles
         wp_enqueue_style( 'main-css' );
+        wp_enqueue_style( 'unicons' );
     }
     public function register_scripts() {
         $main_js = AMILAFT_DIR_URI. '/assets/js/main.js';
